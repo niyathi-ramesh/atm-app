@@ -1,0 +1,24 @@
+<div class="landing-container">
+  <form class="atm-form" [formGroup]="atmForm" (ngSubmit)="onSubmit()">
+    <input
+      class="atm-form__input"
+      type="number"
+      formControlName="amount"
+      pattern="\d*"
+    />
+    <br />
+    <button
+      class="atm-button"
+      type="submit"
+      [disabled]="atmForm.value.amount <= 0 || atmForm.invalid"
+    >
+      Enter
+    </button>
+  </form>
+
+  <ul>
+    <li *ngFor="let amount of distAmount">
+      {{ amount.freq }} X {{ amount.currency }}Rs.
+    </li>
+  </ul>
+</div>

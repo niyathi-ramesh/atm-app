@@ -1,0 +1,19 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.atm-button {
+  padding: 0.5rem 1rem;
+  outline: none;
+  cursor: pointer;
+  margin-top: 2rem;
+}
